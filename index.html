@@ -1,12 +1,14 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My Blog</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.1/spin.js"></script>
 </head>
@@ -16,24 +18,41 @@
 	 <div class="container">
 			<div class="row">
 				<div class = "five columns game">
-
 						<img  class="logo" src="./img/blackjack.png">
 						<p id="felix">
-							<em>By: Casino Felix</em>
+							Casino Felix
 						</p>
 						<br><button id="start">START GAME</button></br>
-
-						
-
 				</div>
+				<audio id="music" src="./music/casino.mp3" Loop></audio>
 			</div>
 	  </div>
+	 <div id="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				GAME RULES
+				<div class="modal-body">
+					<p>
+							The object of the blackjack game is to accumulate cards with point totals as close to 21 without going over 21. Face cards (Jacks, Queens and Kings) are worth 10 points. Aces are worth 1 or 11, whichever is preferable. Other cards are represented by their number.
 
+							If player and the House tie, it is a push and no one wins. Ace and 10 (Blackjack) on the first two cards dealt is an automatic player win at 1.5 to 1, unless the house ties. A player may stand at any time.
+					</p>
+
+							To win you need to beat the dealer without busting. You bust when your cards total to more than 21 and you lose automatically. The winner is whoever has closest to a total of 21. You reach 21 by adding up the values of the cards.
+
+							The blackjack table seats about 6 players. Either six or eight decks of cards are used and are shuffled together by the dealer and placed in a card dispensing box called 'Shoe'.
+
+							Before receiving any cards players must place a wager. Then the players are dealt two cards face up.By rule, on counts of 17 or higher the dealer must stay; on counts of 16 or lower the dealer must draw.
+
+							If you make a total of 21 with the first two cards (a 10 or a face and an Ace), you win automatically. This is called 'Blackjack'. If you have Blackjack, you will win one and one-half times your bet unless the dealer also has Blackjack, in which case it is a Push or a Tie (or a Stand-off) and you get your bet back.
+
+					<button id="close-modal">Play Game</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 	<div id="footer">&copy 2015  Felix Wong - GABlackJack. All Rights Reserved</div>
 	<script src="main.js"></script>
 </body>
 </html>
-=======
-<h1>hello</h1>
->>>>>>> 5804a5dd5359cca663e8a4ef7c2e9f65d43a2ac5
