@@ -107,10 +107,12 @@ $("#start").click(function(){
 
 /******LOAD GAME RULES*********/
 $("#modal").toggle();
+$("#modal").addClass("animated fadeIn");
 
 
 /********************************Global objects and Functions******************************/
 $("#music").get(0).play();
+$("#music").volume = 0.3; 
 
 //Random Function
 function getRandom(min, max) {
@@ -327,9 +329,10 @@ $("#close-modal").click(function(){
 				$("#betBox").val("$" + betAmount);
 			})
 			$("#bet").click(function(){
-				//only click once
-				$("#deal").toggle();
+
 				if(betAmount <= defaultBalance){
+					$("#deal").toggle();
+					$("#deal").addClass("animated fadeIn");
 					defaultBalance -= betAmount;
 					$("#balanceBox").val("$" + defaultBalance);
 					betChecker = false;
@@ -394,21 +397,24 @@ $("#close-modal").click(function(){
 				 
 				setTimeout(function(){
 				 $("#card5").toggle();
-				 $("#card5").animate({right: '+=500', top: '+=320'}, 200);
+				 $("#card5").animate({right: '+=500', top: '+=280'}, 200);
 				 
 				},200);
 				
 				setTimeout(function(){
 				 $("#card6").toggle();
-				 $("#card6").animate({right: '+=480', top: '+=320'}, 200);
+				 $("#card6").animate({right: '+=480', top: '+=280'}, 200);
 				 
 				},400);
 				$("#row0").toggle();
 				$("#row00").toggle();
 				$("#deal").toggle();
+
+				$(".play").addClass("animated fadeInUp");
+				$(".play").toggle();
+				
 				$("#hit").toggle();
 				$("#stand").toggle();
-				$(".play").toggle();
 			})
 
 			hit();
@@ -422,9 +428,8 @@ $("#close-modal").click(function(){
 
 			//Default case for 21
 			if(dValue === 21){
-				displayModal("Dealer Wins");
-			}
-			if(pValue === 21){
+				displayModal("Dealer Wins!");
+			}else if(pValue === 21){
 			//update balance
 				displayModal("You Win!");
 				defaultBalance += 2*betAmount;
@@ -513,7 +518,7 @@ $("#close-modal").click(function(){
 			 	case 0:
 			 	$("#card7").css("background-image","url"+"("+"./img/cards/"+mapCard(cardNumber)+"_of_" + mapSuits(suitsNumber) + ".png)");
 			 	$("#card7").toggle();
-			 	$("#card7").animate({right: '+=460', top: '+=320'}, 200);
+			 	$("#card7").animate({right: '+=460', top: '+=280'}, 200);
 			 	cardCounter++;
 			 	//Special Case for Aces
 			 	if(mapCard(cardNumber) === 'aces' && (playerValue + 11) > 21 ){
@@ -531,7 +536,7 @@ $("#close-modal").click(function(){
 				suitsNumber = getRandom(0,cards[mapCard(cardNumber)].suitsUsedCount.length);
 			 	$("#card8").css("background-image","url"+"("+"./img/cards/"+mapCard(cardNumber)+"_of_" + mapSuits(suitsNumber) + ".png)");
 			 	$("#card8").toggle();
-			 	$("#card8").animate({right: '+=440', top: '+=320'}, 200);
+			 	$("#card8").animate({right: '+=440', top: '+=280'}, 200);
 			 	//Special Cases for Aces
 			 	if(mapCard(cardNumber) === 'aces' && (playerValue + 11) > 21 ){
 			 		playerValue += parseInt(cards[mapCard(cardNumber)].value2);
@@ -559,13 +564,14 @@ $("#close-modal").click(function(){
 		dealerDeals();
 		betAmount = 0;
 
-	},2000)
+	},2700)
 	}
 
 	})
+
 	var displayModal = function displayModal(text){
 		var modalBox = $("#modal");
-		$(".modal-content").css({"height":"100px","width":"200px","margin-left":"650px","margin-top":"200px"});
+		$(".modal-content").css({"height":"100px","width":"200px","margin-left":"620px","margin-top":"200px"});
 		$(".modal-header").css({"height":"30px","width":"200px"});
 		$(".modal-header").text(text);
 
