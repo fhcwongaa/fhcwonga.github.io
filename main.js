@@ -271,10 +271,10 @@ $("#close-modal").click(function(){
 		chip3.attr("src","./img/tenDollar.png");
 		chipBar.append(chip3);
 		var chip4 = $("<img>").attr("class","chip").attr("id","tfDollar");
-		chip4.attr("src","./img/25Dollar.png");
+		chip4.attr("src","./img/tfDollar.png");
 		chipBar.append(chip4);
 		var chip5 = $("<img>").attr("class","chip").attr("id","ohDollar");;
-		chip5.attr("src","./img/100Dollar.png");
+		chip5.attr("src","./img/ohDollar.png");
 		chipBar.append(chip5);
 		
 		//deal
