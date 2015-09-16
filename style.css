@@ -325,7 +325,10 @@ html{
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -moz- transform: translate(-50%, -50%);
 }
 #header{
 	width:100%;
