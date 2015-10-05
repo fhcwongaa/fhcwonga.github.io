@@ -371,9 +371,10 @@ html{
 	border-radius: 25px;
 	border: solid white 2px;
 	color:white;
-	height:600px;
+	height:550px;
 	font-size: 15px;
 	text-align: left;
+	overflow: scroll;
 }
 
 
@@ -395,7 +396,7 @@ html{
 	border-radius: 25px;
 	text-align: left;
 	margin: 30px;
-	width:650px;
+	width:90%;
 
 
 }
